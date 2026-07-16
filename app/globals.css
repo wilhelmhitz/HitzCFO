@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+/* ============================================================
+   WILHELM HITZ
+   Executive Website
+   ============================================================ */
+
+:root {
+  --background: #ffffff;
+
+  --foreground: #0b1324;
+
+  --primary: #0b2545;
+
+  --secondary: #c8a96a;
+
+  --muted: #6b7280;
+
+  --border: #ececec;
+
+  --section: #f8fafc;
+
+  --radius: 18px;
+
+  --max-width: 1380px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--background);
+
+  color: var(--foreground);
+
+  font-family: var(--font-inter), sans-serif;
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+
+.container {
+  width: 100%;
+
+  max-width: var(--max-width);
+
+  margin: auto;
+
+  padding-left: 40px;
+
+  padding-right: 40px;
+}
+
+section {
+  padding-top: 120px;
+
+  padding-bottom: 120px;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+
+h1 {
+  font-size: clamp(4rem, 8vw, 6.5rem);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.4rem;
+
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.12rem;
+
+  line-height: 1.85;
+
+  color: var(--muted);
+}
+
+/* ============================================================
+   Links
+   ============================================================ */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: .25s;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.button-primary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 16px 34px;
+
+  border-radius: 999px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: .35s;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+
+  background: #133867;
+}
+
+.button-secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 16px 34px;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+
+  transition: .35s;
+}
+
+.button-secondary:hover {
+  border-color: var(--primary);
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+
+.card {
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  padding: 32px;
+
+  transition: .35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+
+.section-light {
+  background: white;
+}
+
+.section-grey {
+  background: var(--section);
+}
+
+/* ============================================================
+   Highlight
+   ============================================================ */
+
+.highlight {
+  color: var(--secondary);
+}
+
+/* ============================================================
+   Divider
+   ============================================================ */
+
+.divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--border);
+}
+
+/* ============================================================
+   Selection
+   ============================================================ */
+
+::selection {
+  background: var(--primary);
+
+  color: white;
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d5d5d5;
+
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .container {
+
+    padding-left: 24px;
+
+    padding-right: 24px;
+  }
+
+  section {
+
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+  }
+
+  h1 {
+
+    font-size: 3.5rem;
+  }
+
+  h2 {
+
+    font-size: 2.2rem;
+  }
+
+}
