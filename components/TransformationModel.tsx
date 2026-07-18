@@ -2,227 +2,155 @@
 
 import { motion } from "framer-motion";
 import {
-    Compass,
-    Users,
-    GitBranch,
-    BarChart3,
-    Rocket
+  Compass,
+  Users,
+  GitBranch,
+  BarChart3,
+  Rocket,
 } from "lucide-react";
 
 const framework = [
-    {
-        icon: Compass,
-        letter: "S",
-        title: "Strategy",
-        description:
-            "Define a clear strategic direction aligned with long-term value creation, customer needs and shareholder expectations."
-    },
-    {
-        icon: Users,
-        letter: "P",
-        title: "People",
-        description:
-            "Build high-performing, customer-centric and people-first organizations through leadership, engagement and accountability."
-    },
-    {
-        icon: GitBranch,
-        letter: "P",
-        title: "Processes",
-        description:
-            "Simplify and standardize end-to-end business processes to improve efficiency, governance and scalability."
-    },
-    {
-        icon: BarChart3,
-        letter: "T",
-        title: "Technology",
-        description:
-            "Leverage digital transformation, AI and modern ERP platforms to enable better decisions and operational excellence."
-    },
-    {
-        icon: Rocket,
-        letter: "E",
-        title: "Execution",
-        description:
-            "Deliver sustainable value through disciplined execution, KPIs, governance and continuous improvement."
-    }
+  {
+    icon: Compass,
+    title: "Strategic Direction",
+    description:
+      "Define a clear strategic path focused on long-term value creation, customer needs and profitable growth.",
+  },
+  {
+    icon: Users,
+    title: "People & Culture",
+    description:
+      "Build high-performing teams, accountability and a culture where people and customers succeed together.",
+  },
+  {
+    icon: GitBranch,
+    title: "Operating Model",
+    description:
+      "Simplify end-to-end processes, governance and ways of working to improve efficiency and scalability.",
+  },
+  {
+    icon: BarChart3,
+    title: "Digital & Data",
+    description:
+      "Leverage technology, digital platforms and data to accelerate decisions and business transformation.",
+  },
+  {
+    icon: Rocket,
+    title: "Performance Discipline",
+    description:
+      "Deliver measurable results through clear priorities, KPIs, governance and execution discipline.",
+  },
 ];
 
 export default function TransformationModel() {
+  return (
+    <section id="transformation" className="section-light">
+      <div className="container">
 
-    return (
-
-        <section
-            id="transformation"
-            className="section-light"
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl"
         >
 
-            <div className="container">
+          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+            Transformation Framework
+          </p>
+
+
+          <h2 className="mt-5">
+            Sustainable Transformation
+            <br />
+            Requires Alignment Across Strategy, People,
+            Processes, Technology ... and Perfect Execution.
+          </h2>
+
+
+          <div className="h-6" />
+
+
+          <div className="gold-line !mt-0" />
+
+
+          <p className="section-intro mt-4 max-w-5xl">
+            Every successful transformation I have led has followed the same
+            principle: align the organisation before accelerating execution.
+          </p>
+
+
+        </motion.div>
+
+
+
+        <div className="relative mt-20">
+
+          <div className="grid gap-8 lg:grid-cols-5">
+
+            {framework.map((item, index) => {
+
+              const Icon = item.icon;
+
+              return (
 
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: .8 }}
+                  key={item.title}
+                  initial={{ opacity: 0, y: 35 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.08,
+                  }}
+                  className="card text-center"
                 >
 
-                    <p className="uppercase tracking-[0.35em] text-sm text-slate-500">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#C8A96A]/30 bg-white shadow-md">
 
-                        My Transformation Framework
+                    <Icon
+                      size={30}
+                      className="text-[#0B2545]"
+                    />
 
-                    </p>
+                  </div>
 
-                    <h2 className="mt-6 max-w-4xl">
 
-                        Every successful transformation starts by aligning
-                        <span className="highlight">
-                            {" "}strategy, people, processes and technology{" "}
-                        </span>
-                        to execute consistently and create sustainable value.
+                  <h3 className="mt-8 text-xl">
+                    {item.title}
+                  </h3>
 
-                    </h2>
+
+                  <p className="mt-5 text-base leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+
 
                 </motion.div>
 
-                <div className="grid lg:grid-cols-5 gap-8 mt-24">
+              );
 
-                    {framework.map((item, index) => {
+            })}
 
-                        const Icon = item.icon;
+          </div>
 
-                        return (
+        </div>
 
-                            <motion.div
 
-                                key={item.title}
 
-                                initial={{
-                                    opacity: 0,
-                                    y: 60
-                                }}
+        <motion.blockquote
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mx-auto mt-24 max-w-5xl text-center text-2xl font-light leading-tight tracking-tight lg:text-4xl"
+        >
+          “Technology alone never transforms a business. Lasting transformation
+          happens when strategy, people, processes and execution move together.”
+        </motion.blockquote>
 
-                                whileInView={{
-                                    opacity: 1,
-                                    y: 0
-                                }}
 
-                                viewport={{
-                                    once: true
-                                }}
-
-                                transition={{
-                                    delay: index * .12,
-                                    duration: .7
-                                }}
-
-                                className="card text-center"
-
-                            >
-
-                                <div
-                                    className="
-                                    w-20
-                                    h-20
-                                    mx-auto
-                                    rounded-full
-                                    bg-slate-100
-                                    flex
-                                    items-center
-                                    justify-center
-                                    "
-                                >
-
-                                    <Icon
-                                        size={34}
-                                        className="text-[#0B2545]"
-                                    />
-
-                                </div>
-
-                                <div
-                                    className="
-                                    mt-8
-                                    text-sm
-                                    tracking-[0.35em]
-                                    uppercase
-                                    text-[#C8A96A]
-                                    font-semibold
-                                    "
-                                >
-
-                                    {item.letter}
-
-                                </div>
-
-                                <h3 className="mt-4">
-
-                                    {item.title}
-
-                                </h3>
-
-                                <p className="mt-5">
-
-                                    {item.description}
-
-                                </p>
-
-                            </motion.div>
-
-                        );
-
-                    })}
-
-                </div>
-
-                <motion.div
-
-                    initial={{
-                        opacity: 0
-                    }}
-
-                    whileInView={{
-                        opacity: 1
-                    }}
-
-                    viewport={{
-                        once: true
-                    }}
-
-                    transition={{
-                        delay: .4
-                    }}
-
-                    className="
-                    mt-28
-                    text-center
-                    max-w-4xl
-                    mx-auto
-                    "
-
-                >
-
-                    <blockquote
-                        className="
-                        text-3xl
-                        lg:text-5xl
-                        font-light
-                        leading-tight
-                        tracking-tight
-                        "
-                    >
-
-                        "Business transformation is not about implementing
-                        technology. It is about creating organizations where
-                        strategy, people, processes and technology work
-                        together to deliver sustainable value."
-
-                    </blockquote>
-
-                </motion.div>
-
-            </div>
-
-        </section>
-
-    );
-
+      </div>
+    </section>
+  );
 }

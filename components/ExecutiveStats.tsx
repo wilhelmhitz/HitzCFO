@@ -6,102 +6,119 @@ const stats = [
   {
     value: "30+",
     title: "Years",
-    subtitle: "Executive Leadership",
+    subtitle:
+      "Executive leadership driving profitable growth and business transformation.",
   },
   {
     value: "5",
-    title: "Countries",
-    subtitle: "International Experience",
-  },
-  {
-    value: "4",
     title: "Industries",
-    subtitle: "Global Expertise",
+    subtitle:
+      "Consumer Goods, Pharma, Logistics, Real Estate and Industrial Retail.",
   },
   {
-    value: "12+",
-    title: "Executive",
-    subtitle: "Leadership Roles",
+    value: "International",
+    title: "Leadership",
+    subtitle:
+      "Leading multicultural teams across global and family-owned businesses.",
   },
   {
-    value: "25+",
-    title: "Countries",
-    subtitle: "Supported Globally",
-  },
-  {
-    value: "$4.5M",
-    title: "Productivity",
-    subtitle: "Savings Delivered",
+    value: "GM / MD",
+    title: "Executive Roles",
+    subtitle:
+      "General Management, transformation and value creation.",
   },
 ];
 
 export default function ExecutiveStats() {
   return (
-    <section
-      id="leadership"
-      className="section-grey"
-    >
+    <section id="executive-impact" className="section-grey">
       <div className="container">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.35em] text-sm text-slate-500">
-
+          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
             Executive Impact
-
           </p>
 
-          <h2 className="mt-5 max-w-3xl">
 
-            More than three decades creating
-            sustainable value through business
-            transformation and executive leadership.
+ 
+          <h2 className="mt-5 mb-16">
+  Experience measured by
+  <br />
+  business transformation.
+</h2>
 
-          </h2>
+<div className="gold-line mb-12" />
+
+<p className="section-intro max-w-5xl">
+  More than three decades delivering measurable improvements in
+  performance, profitability and organisational capability through
+  strategy, execution and people leadership.
+</p>
 
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mt-20">
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
           {stats.map((item, index) => (
-
             <motion.div
-              key={item.value}
-              initial={{ opacity: 0, y: 50 }}
+              key={item.title}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: .7,
-                delay: index * .1,
+                duration: 0.55,
+                delay: index * 0.08,
               }}
-              className="card"
+              className="card h-[280px] flex flex-col"
             >
 
-              <h3 className="text-6xl font-bold text-[#0B2545]">
+              {/* VALUE BLOCK - SAME HEIGHT FOR ALL CARDS */}
+              <div className="h-[65px] flex items-start">
 
-                {item.value}
+                <div
+                  className={`
+                    font-bold
+                    leading-none
+                    text-[#0B2545]
 
-              </h3>
+                    ${
+                      item.value === "International"
+                        ? "text-[2.6rem] tracking-tight"
+                        : item.value === "GM / MD"
+                        ? "text-[2.8rem] tracking-tight"
+                        : "text-[3.2rem] tracking-tight"
+                    }
+                  `}
+                >
+                  {item.value}
+                </div>
 
-              <h4 className="mt-6 text-2xl font-semibold">
+              </div>
 
-                {item.title}
 
-              </h4>
+              {/* TEXT BLOCK */}
+              <div className="mt-8">
 
-              <p className="mt-3">
+                <div className="text-xs uppercase tracking-[0.35em] text-slate-500">
+                  {item.title}
+                </div>
 
-                {item.subtitle}
 
-              </p>
+                <p className="mt-3 text-base leading-6 text-slate-600">
+                  {item.subtitle}
+                </p>
+
+              </div>
 
             </motion.div>
-
           ))}
 
         </div>

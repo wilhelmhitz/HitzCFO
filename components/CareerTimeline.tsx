@@ -4,76 +4,12 @@ import { motion } from "framer-motion";
 
 const career = [
   {
-    year: "1994",
-    title: "Plant Manager",
-    company: "PepsiCo",
-    location: "Dominican Republic",
+    year: "2026",
+    title: "Managing Director",
+    company: "Herraiz",
+    location: "Tortosa",
     description:
-      "Started an international career leading manufacturing operations, KPI-driven performance and operational excellence."
-  },
-  {
-    year: "1996",
-    title: "Logistics Manager",
-    company: "PepsiCo",
-    location: "Puerto Rico",
-    description:
-      "Expanded responsibilities into Supply Chain, Procurement and Distribution, delivering significant service and cash flow improvements."
-  },
-  {
-    year: "1998",
-    title: "IT & Financial Planning Manager",
-    company: "PepsiCo",
-    location: "Puerto Rico",
-    description:
-      "Combined Information Technology and Finance, leading digital transformation, ERP modernization and Business Intelligence."
-  },
-  {
-    year: "2002",
-    title: "Financial Planning Manager",
-    company: "PepsiCo",
-    location: "Mexico",
-    description:
-      "Led FP&A for four business units, supporting strategic planning, investment decisions and commercial performance."
-  },
-  {
-    year: "2004",
-    title: "Chief Financial Officer",
-    company: "PepsiCo",
-    location: "Guatemala",
-    description:
-      "Partnered with the General Manager to drive profitable growth, strategic planning, governance and business development."
-  },
-  {
-    year: "2007",
-    title: "Europe IT CFO",
-    company: "PepsiCo",
-    location: "Barcelona",
-    description:
-      "Built the European IT Finance organization while supporting one of PepsiCo's largest transformation programmes."
-  },
-  {
-    year: "2011",
-    title: "Risk & Compliance Director",
-    company: "PepsiCo",
-    location: "Europe & SSA",
-    description:
-      "Led Governance, SOX, Cybersecurity and Business Continuity across more than 25 countries."
-  },
-  {
-    year: "2014",
-    title: "Global Director",
-    company: "PepsiCo",
-    location: "Global",
-    description:
-      "Defined global strategy and governance for technology assets supporting worldwide operations."
-  },
-  {
-    year: "2018",
-    title: "General Manager",
-    company: "Lacer",
-    location: "Barcelona",
-    description:
-      "Executive Committee member leading Finance, HR, IT and Legal while accelerating enterprise-wide transformation."
+      "Leading the transformation of a family-owned industrial distribution business by modernising governance, customer experience, commercial execution and operational performance while preparing the organisation for sustainable growth",
   },
   {
     year: "2021",
@@ -81,135 +17,181 @@ const career = [
     company: "Grupo Agora",
     location: "Barcelona",
     description:
-      "Led the turnaround of a multinational family-owned holding through governance, operational excellence and value creation."
+      "Led the transformation of a multinational family-owned holding company, returning the Group to profitability after three consecutive years of losses through organizational redesign, shared services, governance and digital transformation. Member of the Advisory and Compliance Boards.",
   },
   {
-    year: "2026",
-    title: "Managing Director",
-    company: "Herraiz",
-    location: "Spain",
+    year: "2018",
+    title: "General Manager",
+    company: "Lacer",
+    location: "Barcelona",
     description:
-      "Leading company-wide transformation focused on profitable growth, people, customers and digital transformation."
-  }
+      "Executive Committee member leading Finance, HR, IT and Legal while accelerating enterprise-wide transformation co-leading the business strategic plan with McKinsey to transform the consumer health division",
+  },
+  {
+    year: "2014",
+    title: "Global Asset Management Director",
+    company: "PepsiCo Global",
+    location: "Barcelona",
+    description:
+      "Defined global strategy and governance for technology assets supporting worldwide business operations.",
+  },
+  {
+    year: "2011",
+    title: "Risk & Compliance Director",
+    company: "PepsiCo Europe & SSA",
+    location: "barcelona",
+    description:
+      "Led Governance, SOX, Cybersecurity and Business Continuity across more than 25 countries.",
+  },
+  {
+    year: "2007",
+    title: "Europe IT CFO",
+    company: "PepsiCo Europe",
+    location: "Barcelona",
+    description:
+      "Established the European IT Finance organisation while supporting one of PepsiCo's largest transformation programmes implementing SAP and Global Networks and Data Centers.",
+  },
+  {
+    year: "2004",
+    title: "Chief Financial Officer",
+    company: "PepsiCo Central America",
+    location: "Guatemala",
+    description:
+      "Partnered with the General Manager to drive profitable growth, strengthen governance and support business expansion.",
+  },
+  {
+    year: "2002",
+    title: "Financial Planning Manager",
+    company: "PepsiCo Mexico",
+    location: "Monterrey",
+    description:
+      "Led Financial Planning & Analysis across four business units in one of Pepsico largest markets.",
+  },
+  {
+    year: "1998",
+    title: "IT & Financial Planning Manager",
+    company: "PepsiCo Caribbean",
+    location: "San Juan Puerto Rico",
+    description:
+      "Integrated Finance and Technology to accelerate ERP modernisation and business intelligence.",
+  },
+  {
+    year: "1996",
+    title: "Logistics Manager",
+    company: "PepsiCo Caribbean",
+    location: "San Juan Puerto Rico",
+    description:
+      "Led Supply Chain, Procurement and Distribution improvement.",
+  },
+  {
+    year: "1994",
+    title: "Plant Manager",
+    company: "PepsiCo Dominican Republic ",
+    location: "Santo Domingo",
+    description:
+      "Started an international leadership career driving manufacturing excellence.",
+  },
 ];
 
 export default function CareerTimeline() {
   return (
-    <section id="career" className="section-grey">
-
+    <section id="career" className="section-white">
       <div className="container">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.35em] text-sm text-slate-500">
-            Leadership Journey
+          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+            Career Journey
           </p>
 
-          <h2 className="mt-5 max-w-4xl">
-            Thirty years of continuous leadership evolution,
-            expanding from operations to global transformation
-            and general management.
-          </h2>
+
+          <h2 className="mt-5">
+  Three decades of leadership across
+  <br />
+  multinational and family-owned businesses.
+</h2>
+
+
+<div className="h-6" />
+
+
+<div className="gold-line !mt-0" />
+
+
+          <p className="section-intro mt-8 max-w-5xl">
+            International experience combining general management,
+            transformation, finance, operations and digital capabilities to
+            create sustainable value and profitable growth year after year.
+          </p>
+
 
         </motion.div>
 
-        <div className="relative mt-24">
 
-          {/* Vertical line */}
+        <div className="relative mt-20 border-l-2 border-[#C8A96A]/40 pl-10">
 
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-slate-300"></div>
+          {career.map((item, index) => (
 
-          <div className="space-y-14">
+            <motion.div
+              key={item.year + item.company}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.04,
+              }}
+              className="relative mb-12"
+            >
 
-            {career.map((item, index) => (
+              <span className="absolute -left-[49px] top-2 h-4 w-4 rounded-full border-4 border-white bg-[#C8A96A]" />
 
-              <motion.div
 
-                key={item.year}
+              <div className="card">
 
-                initial={{
-                  opacity: 0,
-                  x: -40
-                }}
+                <div className="grid gap-8 lg:grid-cols-[110px_1fr]">
 
-                whileInView={{
-                  opacity: 1,
-                  x: 0
-                }}
+                  <div className="text-4xl font-bold text-[#0B2545]">
+                    {item.year}
+                  </div>
 
-                viewport={{
-                  once: true
-                }}
 
-                transition={{
-                  duration: .7,
-                  delay: index * .05
-                }}
+                  <div>
 
-                className="relative pl-20"
+                    <h3 className="text-2xl">
+                      {item.title}
+                    </h3>
 
-              >
 
-                {/* Dot */}
+                    <p className="mt-2 text-sm uppercase tracking-[0.3em] text-[#C8A96A]">
+                      {item.company} · {item.location}
+                    </p>
 
-                <div
-                  className="
-                  absolute
-                  left-[14px]
-                  top-2
-                  w-5
-                  h-5
-                  rounded-full
-                  bg-[#C8A96A]
-                  border-4
-                  border-white
-                  shadow
-                  "
-                />
 
-                <div className="card">
+                    <p className="mt-6 leading-8 text-slate-600">
+                      {item.description}
+                    </p>
 
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-
-                    <div>
-
-                      <span className="text-sm uppercase tracking-[0.25em] text-slate-500">
-                        {item.year}
-                      </span>
-
-                      <h3 className="mt-2 text-2xl">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-1 font-medium text-slate-700">
-                        {item.company} · {item.location}
-                      </p>
-
-                    </div>
 
                   </div>
 
-                  <p className="mt-6">
-                    {item.description}
-                  </p>
-
                 </div>
 
-              </motion.div>
+              </div>
 
-            ))}
+            </motion.div>
 
-          </div>
+          ))}
 
         </div>
 
       </div>
-
     </section>
   );
 }

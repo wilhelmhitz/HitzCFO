@@ -1,167 +1,110 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowDownRight, Download } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center bg-white">
+    <section id="home" className="hero bg-white">
+      <div className="container grid lg:grid-cols-[1.28fr_0.72fr] gap-14 items-start">
 
-      <div className="container grid lg:grid-cols-2 gap-20 items-center">
-
-        {/* LEFT */}
+        {/* LEFT COLUMN */}
 
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.9,
-            ease: "easeOut",
-          }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
         >
 
-          <p className="uppercase tracking-[0.35em] text-sm text-slate-500 mb-8">
-
+          <p className="uppercase tracking-[0.45em] text-[13px] font-medium text-[#C8A96A]">
             Managing Director · Business Transformation Executive
-
           </p>
 
-          <h1>
 
-            Transforming
+          <h1 className="max-w-none text-[#0B1736] font-bold">
+            Building Better
             <br />
-
             Businesses
-
-            <span className="block text-[#C8A96A]">
-              Through
-              <br />
-              People,
-              Strategy &
-              Technology
-            </span>
-
           </h1>
 
-          <p className="mt-10 max-w-xl text-xl leading-9">
 
-            Helping organizations create sustainable value by putting
-            customers and people at the center, aligning strategy,
-            processes and technology to accelerate profitable growth
-            and operational excellence.
+          <h2 className="max-w-[760px] text-3xl font-medium text-[#C8A96A]">
+            Through People, Strategy & Technology
+          </h2>
 
+
+          <div className="gold-line" />
+
+
+          <p className="max-w-[760px] text-xl text-slate-600">
+            Managing Director with more than 30 years of international
+            experience leading business transformation, operational
+            excellence and profitable growth across multinational and
+            family-owned companies.
           </p>
 
-          <div className="flex flex-wrap gap-5 mt-14">
+
+          <div className="flex flex-wrap gap-5 mt-9">
 
             <a
-              href="/files/Wilhelm_Hitz_Executive_Biography.pdf"
+              href="/files/Wilhelm Hitz - Executive biography - July 2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-primary"
             >
               <Download className="mr-3" size={18} />
-
               Executive Biography
             </a>
 
+
             <a
-              href="#transformation"
-              className="button-secondary"
+              href="/files/Wilhelm Hitz - Executive CV - July 2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-primary"
             >
-              Explore my work
-
-              <ArrowDownRight
-                className="ml-3"
-                size={18}
-              />
-
+              <Download className="mr-3" size={18} />
+              Complete CV
             </a>
 
           </div>
 
         </motion.div>
 
-        {/* RIGHT */}
+
+        {/* RIGHT COLUMN */}
 
         <motion.div
-
-          initial={{
-            opacity: 0,
-            scale: .92,
-          }}
-
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-
-          transition={{
-            duration: 1.2,
-          }}
-
-          className="relative"
-
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center"
         >
 
-          <div
-            className="
-            rounded-[32px]
-            overflow-hidden
-            shadow-2xl
-            "
-          >
+          <div className="relative w-[460px] h-[575px] overflow-hidden rounded-[34px] border border-slate-200 shadow-[0_28px_60px_rgba(15,23,42,.16)]">
 
-            <img
-              src="/profile.jpg"
+            <Image
+              src="/images/leadership.jpg"
               alt="Wilhelm Hitz"
-              className="w-full object-cover"
+              fill
+              priority
+              className="object-cover object-[50%_18%]"
             />
 
-          </div>
-
-          {/* Floating Card */}
-
-          <div
-            className="
-            absolute
-            -bottom-8
-            -left-8
-            bg-white
-            rounded-3xl
-            shadow-xl
-            border
-            border-slate-200
-            p-8
-            hidden
-            lg:block
-            "
-          >
-
-            <p className="uppercase text-xs tracking-[0.25em] text-slate-500">
-
-              Leadership Philosophy
-
-            </p>
-
-            <h3 className="mt-3 text-xl leading-8">
-
-              Customer-Centric
-
-              <br />
-
-              People-First
-
-              <br />
-
-              Value Creation
-
-            </h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent" />
 
           </div>
+
+
+
+         
+
 
         </motion.div>
 
-      </div>
 
+      </div>
     </section>
   );
 }

@@ -1,57 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Users,
-  HeartHandshake,
-  BarChart3,
-  ShieldCheck,
-  Cpu,
-  TrendingUp
-} from "lucide-react";
 
 const principles = [
   {
-    icon: HeartHandshake,
-    title: "Customer First",
+    number: "01",
+    title: "Purpose & Direction",
     description:
-      "Every transformation starts by understanding how to create more value for customers."
+      "Creating clarity around priorities, strategy and value creation to align the entire organisation towards common goals.",
   },
   {
-    icon: Users,
+    number: "02",
     title: "People First",
     description:
-      "Engaged people build extraordinary organizations. Leadership is about developing people before managing performance."
+      "Building an organisation where every person can contribute, develop and succeed through trust, collaboration, recognition and empowerment. I believe leaders must coach, mentor and create a workplace where people feel valued, engaged and proud to belong.",
   },
   {
-    icon: BarChart3,
-    title: "Data Driven",
+    number: "03",
+    title: "Ownership & Accountability",
     description:
-      "Facts over opinions. KPIs, governance and transparency enable better decisions."
+      "Establishing a culture where commitments are clear, decisions are owned and everyone understands their contribution to business results.",
   },
   {
-    icon: ShieldCheck,
-    title: "Accountability",
+    number: "04",
+    title: "Transformation Mindset",
     description:
-      "Clear ownership, disciplined execution and governance create sustainable performance."
+      "Leading change with energy, resilience and discipline to turn challenges into opportunities and create sustainable improvement.",
   },
   {
-    icon: Cpu,
-    title: "Technology as an Enabler",
+    number: "05",
+    title: "Customer & Value Focus",
     description:
-      "Technology and AI should simplify work, improve decisions and empower people—not replace leadership."
+      "Ensuring every decision improves customer value and strengthens long-term business performance.",
   },
   {
-    icon: TrendingUp,
-    title: "Continuous Improvement",
+    number: "06",
+    title: "Knowledge & Data Driven Decisions",
     description:
-      "Transformation is not a project. It is a mindset embedded in the organization's culture."
-  }
+      "Combining theoretical knowledge, practical business experience and measurable KPIs to make informed decisions, continuously improve and deliver sustainable results.",
+  },
 ];
 
 export default function Leadership() {
   return (
-    <section className="section-grey">
+    <section id="leadership" className="section-white">
 
       <div className="container">
 
@@ -59,106 +51,91 @@ export default function Leadership() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.35em] text-sm text-slate-500">
+          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
             Leadership Philosophy
           </p>
 
-          <h2 className="mt-5 max-w-5xl">
-            Building customer-centric and people-first organizations
-            through disciplined execution, operational excellence
-            and sustainable value creation.
+
+          <h2 className="mt-5">
+            Leading through clarity,
+            <br />
+            accountability and people.
           </h2>
+
+
+          <div className="h-10" />
+
+
+          <div className="gold-line !mt-0" />
+
+
+          <p className="section-intro mt-6 max-w-5xl">
+            Sustainable business transformation happens when strategy,
+            people and execution are fully aligned. Leaders create impact by
+            setting a clear direction, empowering the organisation and
+            building a culture of accountability, continuous improvement and
+            sustainable value creation.
+          </p>
+
 
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mt-24">
 
-          {principles.map((item, index) => {
 
-            const Icon = item.icon;
+        <div className="mt-16 flex flex-col gap-6">
 
-            return (
 
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: .7,
-                  delay: index * .08
-                }}
-                className="card"
-              >
+          {principles.map((item, index) => (
 
-                <div
-                  className="
-                  w-16
-                  h-16
-                  rounded-full
-                  bg-slate-100
-                  flex
-                  items-center
-                  justify-center
-                  "
-                >
+            <motion.div
+              key={item.number}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.08,
+              }}
+              className="card"
+            >
 
-                  <Icon
-                    size={30}
-                    className="text-[#0B2545]"
-                  />
+              <div className="grid gap-6 md:grid-cols-[90px_1fr] items-start">
+
+
+                <div className="text-3xl font-bold text-[#C8A96A]">
+                  {item.number}
+                </div>
+
+
+                <div>
+
+                  <h3 className="text-2xl text-[#0B2545]">
+                    {item.title}
+                  </h3>
+
+
+                  <p className="mt-4 leading-8 text-slate-600">
+                    {item.description}
+                  </p>
+
 
                 </div>
 
-                <h3 className="mt-8 text-2xl">
-                  {item.title}
-                </h3>
 
-                <p className="mt-5 leading-8">
-                  {item.description}
-                </p>
+              </div>
 
-              </motion.div>
 
-            );
+            </motion.div>
 
-          })}
+          ))}
+
 
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: .4 }}
-          className="mt-28"
-        >
-
-          <div className="divider mb-16" />
-
-          <blockquote
-            className="
-            max-w-5xl
-            text-3xl
-            lg:text-5xl
-            font-light
-            leading-tight
-            tracking-tight
-            "
-          >
-            “I build customer-centric and people-first organizations by aligning
-            strategy, people, processes and technology to deliver sustainable
-            value creation, operational excellence and profitable growth.”
-          </blockquote>
-
-          <p className="mt-10 uppercase tracking-[0.3em] text-sm text-slate-500">
-            Wilhelm Hitz
-          </p>
-
-        </motion.div>
 
       </div>
 

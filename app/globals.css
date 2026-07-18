@@ -3,298 +3,536 @@
 /* ============================================================
    WILHELM HITZ
    Executive Website
-   ============================================================ */
+============================================================ */
 
 :root {
-  --background: #ffffff;
 
-  --foreground: #0b1324;
+  --background:#ffffff;
 
-  --primary: #0b2545;
+  --foreground:#0B1324;
 
-  --secondary: #c8a96a;
+  --primary:#0B2545;
 
-  --muted: #6b7280;
+  --secondary:#B08D57;
 
-  --border: #ececec;
+  --muted:#64748B;
 
-  --section: #f8fafc;
+  --border:#E8EDF2;
 
-  --radius: 18px;
+  --section:#F8FAFC;
 
-  --max-width: 1380px;
+  --radius:24px;
+
+  --max-width:1380px;
+
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+
+  scroll-behavior:smooth;
+
 }
 
-body {
-  margin: 0;
+body{
 
-  background: var(--background);
+  margin:0;
 
-  color: var(--foreground);
+  background:var(--background);
 
-  font-family: var(--font-inter), sans-serif;
+  color:var(--foreground);
 
-  overflow-x: hidden;
+  font-family:var(--font-inter),sans-serif;
 
-  text-rendering: optimizeLegibility;
+  overflow-x:hidden;
 
-  -webkit-font-smoothing: antialiased;
+  text-rendering:optimizeLegibility;
+
+  -webkit-font-smoothing:antialiased;
+
 }
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
+*::after{
+
+  box-sizing:border-box;
+
 }
 
 /* ============================================================
    Layout
-   ============================================================ */
+============================================================ */
 
-.container {
-  width: 100%;
+.container{
 
-  max-width: var(--max-width);
+  width:100%;
 
-  margin: auto;
+  max-width:var(--max-width);
 
-  padding-left: 40px;
+  margin-inline:auto;
 
-  padding-right: 40px;
+  padding-inline:40px;
+
 }
 
-section {
-  padding-top: 120px;
+section{
 
-  padding-bottom: 120px;
+  padding-block:120px;
+
 }
 
 /* ============================================================
    Typography
-   ============================================================ */
+============================================================ */
 
-h1 {
-  font-size: clamp(4rem, 8vw, 6.5rem);
+h1{
 
-  font-weight: 700;
+  margin:0;
 
-  line-height: 1;
+  font-size:clamp(4rem,8vw,6.6rem);
 
-  letter-spacing: -3px;
+  font-weight:700;
 
-  margin: 0;
+  line-height:.96;
+
+  letter-spacing:-3px;
+
 }
 
-h2 {
-  font-size: clamp(2.4rem, 4vw, 3.5rem);
+h2{
 
-  font-weight: 700;
+  margin:0;
 
-  line-height: 1.1;
+  font-size:clamp(2.6rem,4vw,3.8rem);
 
-  letter-spacing: -1.5px;
+  font-weight:700;
 
-  margin-bottom: 20px;
+  line-height:1.08;
+
+  letter-spacing:-2px;
+
 }
 
-h3 {
-  font-size: 1.4rem;
+h3{
 
-  font-weight: 600;
+  margin:0;
+
+  font-size:1.6rem;
+
+  font-weight:600;
+
+  letter-spacing:-.5px;
+
 }
 
-p {
-  font-size: 1.12rem;
+p{
 
-  line-height: 1.85;
+  margin:0;
 
-  color: var(--muted);
+  font-size:1.1rem;
+
+  line-height:1.9;
+
+  color:var(--muted);
+
+}
+
+.section-title{
+
+  font-size:.82rem;
+
+  font-weight:600;
+
+  letter-spacing:.38em;
+
+  text-transform:uppercase;
+
+  color:var(--secondary);
+
+}
+.gold-line {
+  width: 70px;
+  height: 2px;
+  background-color: #C8A96A;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 /* ============================================================
    Links
-   ============================================================ */
+============================================================ */
 
-a {
-  color: inherit;
+a{
 
-  text-decoration: none;
+  color:inherit;
 
-  transition: .25s;
+  text-decoration:none;
+
+  transition:color .3s ease;
+
 }
 
-a:hover {
-  color: var(--primary);
+a:hover{
+
+  color:var(--primary);
+
 }
 
 /* ============================================================
    Buttons
-   ============================================================ */
+============================================================ */
 
-.button-primary {
-  display: inline-flex;
+.button-primary{
 
-  align-items: center;
+  display:inline-flex;
 
-  justify-content: center;
+  align-items:center;
 
-  padding: 16px 34px;
+  justify-content:center;
 
-  border-radius: 999px;
+  gap:10px;
 
-  background: var(--primary);
+  padding:17px 34px;
 
-  color: white;
+  border-radius:999px;
 
-  font-weight: 600;
+  background:var(--primary);
 
-  transition: .35s;
+  color:#fff;
+
+  font-weight:600;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    box-shadow .3s ease;
+
 }
 
-.button-primary:hover {
-  transform: translateY(-2px);
+.button-primary:hover{
 
-  background: #133867;
+  background:#12365F;
+
+  color:#fff;
+
+  transform:translateY(-2px);
+
+  box-shadow:0 14px 36px rgba(11,37,69,.22);
+
 }
 
-.button-secondary {
-  display: inline-flex;
+.button-secondary{
 
-  align-items: center;
+  display:inline-flex;
 
-  justify-content: center;
+  align-items:center;
 
-  padding: 16px 34px;
+  justify-content:center;
 
-  border-radius: 999px;
+  gap:10px;
 
-  border: 1px solid var(--border);
+  padding:17px 34px;
 
-  transition: .35s;
+  border-radius:999px;
+
+  border:1px solid rgba(15,23,42,.10);
+
+  background:#fff;
+
+  font-weight:600;
+
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+
 }
 
-.button-secondary:hover {
-  border-color: var(--primary);
+.button-secondary:hover{
 
-  color: var(--primary);
+  color:var(--primary);
 
-  transform: translateY(-2px);
+  border-color:var(--secondary);
+
+  transform:translateY(-2px);
+
+  box-shadow:0 10px 28px rgba(15,23,42,.08);
+
 }
 
 /* ============================================================
    Cards
-   ============================================================ */
+============================================================ */
 
-.card {
-  background: white;
+.card{
 
-  border: 1px solid var(--border);
+  background:#fff;
 
-  border-radius: var(--radius);
+  border:1px solid rgba(15,23,42,.08);
 
-  padding: 32px;
+  border-radius:24px;
 
-  transition: .35s;
+  padding:40px;
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+
+  box-shadow:
+    0 4px 14px rgba(15,23,42,.03);
+
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.card:hover{
 
-  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+  transform:translateY(-6px);
+
+  border-color:rgba(176,141,87,.35);
+
+  box-shadow:
+    0 24px 60px rgba(15,23,42,.08);
+
 }
 
 /* ============================================================
    Sections
-   ============================================================ */
+============================================================ */
 
-.section-light {
-  background: white;
+.section-white{
+
+  background:#fff;
+
 }
 
-.section-grey {
-  background: var(--section);
-}
+.section-grey{
 
-/* ============================================================
-   Highlight
-   ============================================================ */
+  background:var(--section);
 
-.highlight {
-  color: var(--secondary);
 }
 
 /* ============================================================
    Divider
-   ============================================================ */
+============================================================ */
 
-.divider {
-  width: 100%;
+.divider{
 
-  height: 1px;
+  width:100%;
 
-  background: var(--border);
+  height:1px;
+
+  background:var(--border);
+
+}
+
+/* ============================================================
+   Highlight
+============================================================ */
+
+.highlight{
+
+  color:var(--secondary);
+
 }
 
 /* ============================================================
    Selection
-   ============================================================ */
+============================================================ */
 
-::selection {
-  background: var(--primary);
+::selection{
 
-  color: white;
+  background:var(--primary);
+
+  color:#fff;
+
 }
 
 /* ============================================================
    Scrollbar
-   ============================================================ */
+============================================================ */
 
-::-webkit-scrollbar {
-  width: 10px;
+::-webkit-scrollbar{
+
+  width:10px;
+
 }
 
-::-webkit-scrollbar-thumb {
-  background: #d5d5d5;
+::-webkit-scrollbar-track{
 
-  border-radius: 100px;
+  background:#F4F6F8;
+
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #bdbdbd;
+::-webkit-scrollbar-thumb{
+
+  background:#CBD5E1;
+
+  border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background:#94A3B8;
+
+}
+
+/* ============================================================
+   Images
+============================================================ */
+
+img{
+
+  display:block;
+
+  max-width:100%;
+
+  height:auto;
+
+}
+
+/* ============================================================
+   Focus
+============================================================ */
+
+:focus-visible{
+
+  outline:2px solid var(--secondary);
+
+  outline-offset:4px;
+
 }
 
 /* ============================================================
    Responsive
-   ============================================================ */
+============================================================ */
 
-@media (max-width: 900px) {
+@media (max-width:900px){
 
-  .container {
+  .container{
 
-    padding-left: 24px;
+    padding-inline:24px;
 
-    padding-right: 24px;
   }
 
-  section {
+  section{
 
-    padding-top: 80px;
+    padding-block:80px;
 
-    padding-bottom: 80px;
   }
 
-  h1 {
+  h1{
 
-    font-size: 3.5rem;
+    font-size:3.5rem;
+
+    letter-spacing:-2px;
+
   }
 
-  h2 {
+  h2{
 
-    font-size: 2.2rem;
+    font-size:2.2rem;
+
+    letter-spacing:-1px;
+
   }
 
+  h3{
+
+    font-size:1.35rem;
+
+  }
+
+  p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+  }
+
+  .card{
+
+    padding:28px;
+
+    border-radius:20px;
+
+  }
+
+  .button-primary,
+  .button-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+  }
+
+}
+
+@media (max-width:640px){
+
+  .container{
+
+    padding-inline:20px;
+
+  }
+
+  section{
+
+    padding-block:72px;
+
+  }
+
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero{
+  padding-top:110px;
+  padding-bottom:40px;
+}
+
+.hero h1{
+  margin-top:6px;
+  margin-bottom:26px;
+  line-height:1.00;
+}
+
+.hero h2{
+  margin-bottom:20px;
+  line-height:1.15;
+  font-size:2.6rem;
+}
+
+.hero .gold-line{
+  margin-bottom:20px;
+}
+
+.hero p{
+  margin-bottom:12px;
+  max-width:760px;
+}
+
+.hero .button-primary,
+.hero .button-secondary{
+  margin-top:0;
+}
+
+/* ============================================================
+   Executive Impact spacing fix
+============================================================ */
+
+#executive-impact h2 {
+  margin-bottom: 24px !important;
+}
+
+#executive-impact .gold-line {
+  margin-bottom: 24px !important;
+}
+
+#executive-impact .section-intro {
+  margin-top: 0 !important;
 }

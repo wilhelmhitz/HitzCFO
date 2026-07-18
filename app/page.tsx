@@ -1,48 +1,26 @@
 import Hero from "@/components/Hero";
 import ExecutiveStats from "@/components/ExecutiveStats";
-import TransformationModel from "@/components/TransformationModel";
 import CareerTimeline from "@/components/CareerTimeline";
-import CaseStudies from "@/components/CaseStudies";
+import Education from "@/components/Education";
 import Leadership from "@/components/Leadership";
-import ThoughtLeadership from "@/components/ThoughtLeadership";
 import Contact from "@/components/Contact";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-
-      {/* Hero */}
+    <main>
 
       <Hero />
 
-      {/* Executive Impact */}
-
       <ExecutiveStats />
-
-      {/* Framework */}
-
-      <TransformationModel />
-
-      {/* Career */}
 
       <CareerTimeline />
 
-      {/* Portfolio */}
-
-      <CaseStudies />
-
-      {/* Leadership */}
+      <Education />
 
       <Leadership />
 
-      {/* Articles */}
-
-      <ThoughtLeadership />
-
-      {/* Contact */}
-
       <Contact />
 
-    </>
+    </main>
   );
 }

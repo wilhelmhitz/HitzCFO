@@ -2,182 +2,133 @@
 
 import { motion } from "framer-motion";
 import {
-    Download,
-    FileText,
-    BookOpen,
-    Presentation,
-    ArrowUpRight
+  Download,
+  FileText,
+  BookOpen,
+  Presentation,
+  ArrowUpRight
 } from "lucide-react";
 
 const downloads = [
-
-    {
-        icon: BookOpen,
-        title: "Executive Biography",
-        description:
-            "One-page executive biography highlighting leadership philosophy, international experience and value creation.",
-        file: "/files/Wilhelm_Hitz_Executive_Biography.pdf"
-    },
-
-    {
-        icon: FileText,
-        title: "Executive CV",
-        description:
-            "Comprehensive executive curriculum vitae covering more than thirty years of international leadership.",
-        file: "/files/Wilhelm_Hitz_Executive_CV.pdf"
-    },
-
-    {
-        icon: Presentation,
-        title: "Transformation Portfolio",
-        description:
-            "Selected business transformation case studies across Herraiz, Grupo Agora, Lacer and PepsiCo.",
-        file: "/files/Transformation_Portfolio.pdf"
-    }
-
+  {
+    icon: BookOpen,
+    title: "Executive Biography",
+    description:
+      "A concise overview of my leadership philosophy, international experience and approach to business transformation.",
+    file: "/files/Wilhelm_Hitz_Executive_Biography.pdf"
+  },
+  {
+    icon: FileText,
+    title: "Executive Curriculum Vitae",
+    description:
+      "A comprehensive executive profile covering more than thirty years of international leadership, finance and transformation.",
+    file: "/files/Wilhelm_Hitz_Executive_CV.pdf"
+  },
+  {
+    icon: Presentation,
+    title: "Transformation Portfolio",
+    description:
+      "Selected transformation projects highlighting operational excellence, governance, digital transformation and profitable growth.",
+    file: "/files/Transformation_Portfolio.pdf"
+  }
 ];
 
 export default function ExecutiveDownloads() {
+  return (
+    <section id="downloads" className="section-grey">
+      <div className="container">
 
-    return (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl"
+        >
+          <p className="section-title">
+            Executive Documents
+          </p>
 
-        <section className="section-grey">
+          <div className="gold-line mt-5 mb-10" />
 
-            <div className="container">
+          <h2>
+            Download executive documents,
+            leadership material and selected
+            transformation case studies.
+          </h2>
 
-                <motion.div
+          <p className="mt-8 max-w-4xl text-lg leading-8 text-slate-600">
+            A curated collection of documents providing additional insight
+            into my leadership experience, business transformation journey
+            and executive background.
+          </p>
 
-                    initial={{opacity:0,y:40}}
+        </motion.div>
 
-                    whileInView={{opacity:1,y:0}}
+        <div className="grid lg:grid-cols-3 gap-8 mt-24">
 
-                    viewport={{once:true}}
+          {downloads.map((item, index) => {
+            const Icon = item.icon;
 
-                >
+            return (
+              <motion.a
+                key={item.title}
+                href={item.file}
+                download
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.08
+                }}
+                className="card group flex flex-col"
+              >
 
-                    <p className="uppercase tracking-[0.35em] text-sm text-slate-500">
+                <div className="flex items-center justify-between">
 
-                        Executive Documents
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-100">
+                    <Icon
+                      size={30}
+                      className="text-[#0B2545]"
+                    />
+                  </div>
 
-                    </p>
-
-                    <h2 className="mt-5 max-w-4xl">
-
-                        Download executive documents,
-                        leadership material and selected
-                        transformation case studies.
-
-                    </h2>
-
-                </motion.div>
-
-                <div className="grid lg:grid-cols-3 gap-8 mt-24">
-
-                    {downloads.map((item,index)=>{
-
-                        const Icon=item.icon;
-
-                        return(
-
-                            <motion.a
-
-                                key={item.title}
-
-                                href={item.file}
-
-                                download
-
-                                initial={{
-                                    opacity:0,
-                                    y:40
-                                }}
-
-                                whileInView={{
-                                    opacity:1,
-                                    y:0
-                                }}
-
-                                viewport={{
-                                    once:true
-                                }}
-
-                                transition={{
-                                    delay:index*.12
-                                }}
-
-                                className="
-                                card
-                                group
-                                block
-                                "
-
-                            >
-
-                                <div className="flex justify-between">
-
-                                    <div
-                                        className="
-                                        w-16
-                                        h-16
-                                        rounded-full
-                                        bg-slate-100
-                                        flex
-                                        items-center
-                                        justify-center
-                                        "
-                                    >
-
-                                        <Icon
-                                            className="text-[#0B2545]"
-                                            size={30}
-                                        />
-
-                                    </div>
-
-                                    <ArrowUpRight
-                                        className="
-                                        text-slate-400
-                                        group-hover:text-[#C8A96A]
-                                        group-hover:-translate-y-1
-                                        group-hover:translate-x-1
-                                        transition
-                                        "
-                                    />
-
-                                </div>
-
-                                <h3 className="mt-10 text-2xl">
-
-                                    {item.title}
-
-                                </h3>
-
-                                <p className="mt-5">
-
-                                    {item.description}
-
-                                </p>
-
-                                <div className="mt-10 flex items-center gap-3 text-[#0B2545] font-semibold">
-
-                                    <Download size={18}/>
-
-                                    Download
-
-                                </div>
-
-                            </motion.a>
-
-                        );
-
-                    })}
+                  <ArrowUpRight
+                    size={24}
+                    className="text-slate-400 transition-all duration-300 group-hover:text-[#B08D57] group-hover:-translate-y-1 group-hover:translate-x-1"
+                  />
 
                 </div>
 
-            </div>
+                <h3 className="mt-10 text-2xl font-semibold">
+                  {item.title}
+                </h3>
 
-        </section>
+                <p className="mt-5 flex-1 leading-8 text-slate-600">
+                  {item.description}
+                </p>
 
-    );
+                <div className="mt-10 pt-8 border-t border-slate-200 flex items-center justify-between">
 
+                  <div className="flex items-center gap-3 font-semibold text-[#0B2545]">
+                    <Download size={18} />
+                    Download PDF
+                  </div>
+
+                  <span className="uppercase tracking-[0.25em] text-xs text-slate-400">
+                    PDF
+                  </span>
+
+                </div>
+
+              </motion.a>
+            );
+          })}
+
+        </div>
+
+      </div>
+    </section>
+  );
 }
