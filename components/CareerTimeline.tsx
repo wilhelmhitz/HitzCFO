@@ -21,7 +21,7 @@ const career = [
   },
   {
     year: "2018",
-    title: "General Manager",
+    title: "General Manager, Corporate Services Division",
     company: "Lacer",
     location: "Barcelona",
     description:
@@ -37,7 +37,7 @@ const career = [
   },
   {
     year: "2011",
-    title: "Risk & Compliance Director",
+    title: "Risk & Compliance Director - Europe & SSA",
     company: "PepsiCo Europe & SSA",
     location: "barcelona",
     description:
@@ -45,7 +45,7 @@ const career = [
   },
   {
     year: "2007",
-    title: "Europe IT CFO",
+    title: "Chief Financial Officer - Europe IT",
     company: "PepsiCo Europe",
     location: "Barcelona",
     description:
@@ -53,7 +53,7 @@ const career = [
   },
   {
     year: "2004",
-    title: "Chief Financial Officer",
+    title: "Chief Financial Officer - Central America",
     company: "PepsiCo Central America",
     location: "Guatemala",
     description:
