@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
+
 const articles = [
   {
     title: "The Real Job of a MD / GM: Creating Value",
@@ -11,6 +13,14 @@ const articles = [
     description:
       "Creating value is the true responsibility of every Managing Director. Operations keep the business running today. Leadership prepares the organisation for tomorrow.",
     href: "/insights/creating-value",
+  },
+  {
+    title: "Strategy Without Execution Creates No Value",
+    category: "Strategy",
+    date: "July 2026 · 8 min read",
+    description:
+      "Even the best strategy is worthless without disciplined execution. Sustainable competitive advantage is built by aligning priorities, people and accountability to turn strategic intent into measurable results.",
+    href: "/insights/strategy-without-execution",
   },
 ];
 
@@ -40,11 +50,7 @@ export default function ExecutiveInsights() {
           <div className="gold-line !mt-0" />
 
           <p className="section-intro mt-6 max-w-5xl">
-            A collection of articles sharing practical reflections on
-            leadership, business transformation, operational excellence and
-            value creation, drawn from more than thirty years of executive
-            experience across multinational corporations and family-owned
-            businesses.
+          Drawing on more than thirty years of executive leadership across multinational corporations and family-owned businesses, these articles share practical perspectives to help leaders create sustainable value and drive business performance. Explore topics including Leadership · Strategy · Transformation · Operational Excellence and Finance.
           </p>
         </motion.div>
 
