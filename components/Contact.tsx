@@ -5,7 +5,7 @@ import { Mail, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-grey">
+    <section id="contact" className="section-white">
 
       <div className="container">
 

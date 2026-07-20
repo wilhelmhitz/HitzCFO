@@ -42,7 +42,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="section-grey">
+    <section id="education" className="section-white">
 
       <div className="container">
 

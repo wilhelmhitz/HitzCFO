@@ -9,16 +9,15 @@ const articles = [
     category: "Leadership",
     date: "July 2026 · 8 min read",
     description:
-      "Creating value is the true responsibility of every Chief Executive. Operations keep the business running today. Leadership prepares the organisation for tomorrow.",
+      "Creating value is the true responsibility of every Managing Director. Operations keep the business running today. Leadership prepares the organisation for tomorrow.",
     href: "/insights/creating-value",
   },
 ];
 
-export default function InsightsPage() {
+export default function ExecutiveInsights() {
   return (
-    <section className="section-grey">
+    <section id="insights" className="section-grey">
       <div className="container">
-
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,15 +25,14 @@ export default function InsightsPage() {
           transition={{ duration: 0.8 }}
           className="max-w-5xl"
         >
-
           <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
             Executive Insights
           </p>
 
           <h2 className="mt-5">
-            Ideas that inspire better leadership
+            Practical insights on leadership,
             <br />
-            and sustainable value creation.
+            transformation and sustainable value creation.
           </h2>
 
           <div className="h-6" />
@@ -42,18 +40,16 @@ export default function InsightsPage() {
           <div className="gold-line !mt-0" />
 
           <p className="section-intro mt-6 max-w-5xl">
-            A collection of articles sharing practical reflections on leadership,
-            business transformation, operational excellence and value creation,
-            drawn from more than thirty years of executive experience across
-            multinational corporations and family-owned businesses.
+            A collection of articles sharing practical reflections on
+            leadership, business transformation, operational excellence and
+            value creation, drawn from more than thirty years of executive
+            experience across multinational corporations and family-owned
+            businesses.
           </p>
-
         </motion.div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
           {articles.map((article, index) => (
-
             <motion.div
               key={article.title}
               initial={{ opacity: 0, y: 35 }}
@@ -63,9 +59,8 @@ export default function InsightsPage() {
                 duration: 0.5,
                 delay: index * 0.08,
               }}
-              className="card"
+              className="card flex flex-col"
             >
-
               <h3 className="text-2xl text-[#0B2545]">
                 {article.title}
               </h3>
@@ -78,23 +73,19 @@ export default function InsightsPage() {
                 {article.date}
               </p>
 
-              <p className="mt-6 leading-8 text-slate-600">
+              <p className="mt-6 leading-8 text-slate-600 flex-grow">
                 {article.description}
               </p>
 
               <Link
                 href={article.href}
-                className="mt-8 inline-flex text-[#0B2545] font-medium hover:text-[#C8A96A] transition-colors"
+                className="mt-8 inline-flex font-medium text-[#0B2545] hover:text-[#C8A96A] transition-colors"
               >
                 Read article →
               </Link>
-
             </motion.div>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );

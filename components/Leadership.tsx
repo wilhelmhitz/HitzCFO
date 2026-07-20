@@ -43,7 +43,7 @@ const principles = [
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="section-white">
+    <section id="leadership" className="section-grey">
 
       <div className="container">
 
