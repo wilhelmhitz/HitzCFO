@@ -536,3 +536,16 @@ img{
 #executive-impact .section-intro {
   margin-top: 0 !important;
 }
+
+/* ============================================================
+   Articles
+============================================================ */
+
+
+.article-content p {
+  margin-bottom: 2rem;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
