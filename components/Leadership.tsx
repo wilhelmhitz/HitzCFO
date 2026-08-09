@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 const principles = [
   {
     number: "01",
@@ -41,11 +42,23 @@ const principles = [
   },
 ];
 
+
+
 export default function Leadership() {
+
+
   return (
-    <section id="leadership" className="section-grey">
+
+
+    <section
+      id="leadership"
+      className="section-white scroll-mt-32"
+    >
+
 
       <div className="container">
+
+
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -55,90 +68,163 @@ export default function Leadership() {
           className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+
+
+          <p className="section-title">
             Leadership Philosophy
           </p>
 
 
+
+
           <h2 className="mt-5">
+
             Leading through clarity,
             <br />
             accountability and people.
+
           </h2>
 
 
-          <div className="h-10" />
 
 
-          <div className="gold-line !mt-0" />
+          <div className="gold-line" />
 
 
-          <p className="section-intro mt-6 max-w-5xl">
+
+
+          <p className="section-intro max-w-5xl">
+
             Sustainable business transformation happens when strategy,
             people and execution are fully aligned. Leaders create impact by
             setting a clear direction, empowering the organisation and
             building a culture of accountability, continuous improvement and
             sustainable value creation.
+
           </p>
+
+
 
 
         </motion.div>
 
 
 
+
+
+
+
         <div className="mt-16 flex flex-col gap-6">
 
 
-          {principles.map((item, index) => (
+
+
+
+          {principles.map((item,index)=>(
+
+
+
 
             <motion.div
+
               key={item.number}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+
+              initial={{ opacity:0,y:25 }}
+
+              whileInView={{ opacity:1,y:0 }}
+
+              viewport={{ once:true }}
+
               transition={{
-                duration: 0.5,
-                delay: index * 0.08,
+                duration:0.5,
+                delay:index*0.08,
               }}
+
               className="card"
+
             >
+
+
+
 
               <div className="grid gap-6 md:grid-cols-[90px_1fr] items-start">
 
 
+
+
+
                 <div className="text-3xl font-bold text-[#C8A96A]">
+
                   {item.number}
+
                 </div>
+
+
+
+
 
 
                 <div>
 
+
+
+
                   <h3 className="text-2xl text-[#0B2545]">
+
                     {item.title}
+
                   </h3>
 
 
+
+
+
                   <p className="mt-4 leading-8 text-slate-600">
+
                     {item.description}
+
                   </p>
 
 
+
+
+
                 </div>
+
+
+
 
 
               </div>
 
 
+
+
+
             </motion.div>
 
+
+
+
           ))}
+
+
+
 
 
         </div>
 
 
+
+
+
       </div>
 
+
+
     </section>
+
+
   );
+
 }

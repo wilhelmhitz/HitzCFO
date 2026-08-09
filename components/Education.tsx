@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 const education = [
   {
     title: "Digital Transformation",
@@ -40,9 +41,19 @@ const education = [
   },
 ];
 
+
+
 export default function Education() {
+
+
   return (
-    <section id="education" className="section-white">
+
+
+    <section
+      id="education"
+      className="section-grey scroll-mt-32"
+    >
+
 
       <div className="container">
 
@@ -55,82 +66,137 @@ export default function Education() {
           className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+
+          <p className="section-title">
             Education & Executive Development
           </p>
 
 
+
+
           <h2 className="mt-5">
+
             Building the knowledge foundation
             <br />
             behind business leadership.
+
           </h2>
 
 
-          <div className="h-6" />
 
 
-          <div className="gold-line !mt-0" />
+          <div className="gold-line" />
 
 
-          <p className="section-intro mt-6 max-w-5xl">
+
+
+
+          <p className="section-intro max-w-5xl">
+
             Academic foundation combining engineering, business administration
             and executive education, supporting a career built around
             transformation, leadership and sustainable value creation.
+
           </p>
+
+
 
 
         </motion.div>
 
 
 
+
+
+
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
 
-          {education.map((item, index) => (
+
+          {education.map((item,index)=>(
+
+
 
             <motion.div
+
               key={item.title}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+
+              initial={{ opacity:0,y:35 }}
+
+              whileInView={{ opacity:1,y:0 }}
+
+              viewport={{ once:true }}
+
               transition={{
-                duration: 0.5,
-                delay: index * 0.08,
+                duration:0.5,
+                delay:index*0.08,
               }}
+
               className="card"
+
             >
 
+
+
+
               <h3 className="text-2xl text-[#0B2545]">
+
                 {item.title}
+
               </h3>
 
 
+
+
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[#C8A96A]">
+
                 {item.institution}
+
               </p>
+
+
+
 
 
               <p className="mt-2 text-sm text-slate-500">
+
                 {item.location}
+
               </p>
+
+
+
 
 
               <p className="mt-6 leading-8 text-slate-600">
+
                 {item.description}
+
               </p>
+
+
 
 
             </motion.div>
 
+
+
           ))}
+
 
 
         </div>
 
 
+
+
       </div>
 
+
+
     </section>
+
+
   );
+
 }

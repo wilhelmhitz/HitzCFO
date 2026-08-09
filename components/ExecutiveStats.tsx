@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 const stats = [
   {
     value: "30+",
@@ -29,10 +30,18 @@ const stats = [
   },
 ];
 
+
 export default function ExecutiveStats() {
+
   return (
-    <section id="executive-impact" className="section-grey">
+
+    <section
+      id="executive-impact"
+      className="section-grey scroll-mt-40 !pt-20 !pb-10"
+    >
+
       <div className="container">
+
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -42,53 +51,72 @@ export default function ExecutiveStats() {
           className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+
+          <p className="section-title">
             Executive Impact
           </p>
 
 
- 
-          <h2 className="mt-5 mb-16">
-  Experience measured by
-  <br />
-  business transformation.
-</h2>
+          <h2 className="mt-5">
 
-<div className="gold-line mb-12" />
+            Experience measured by
+            <br />
+            business transformation.
 
-<p className="section-intro max-w-5xl">
-  More than three decades delivering measurable improvements in
-  performance, profitability and organisational capability through
-  strategy, execution and people leadership.
-</p>
+          </h2>
+
+
+          <div className="gold-line" />
+
+
+          <p className="section-intro max-w-5xl">
+
+            More than three decades delivering measurable improvements in
+            performance, profitability and organisational capability through
+            strategy, execution and people leadership.
+
+          </p>
+
 
         </motion.div>
 
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+
 
           {stats.map((item, index) => (
+
+
             <motion.div
+
               key={item.title}
+
               initial={{ opacity: 0, y: 35 }}
+
               whileInView={{ opacity: 1, y: 0 }}
+
               viewport={{ once: true }}
+
               transition={{
                 duration: 0.55,
                 delay: index * 0.08,
               }}
+
               className="card h-[280px] flex flex-col"
+
             >
 
-              {/* VALUE BLOCK - SAME HEIGHT FOR ALL CARDS */}
+
               <div className="h-[65px] flex items-start">
+
 
                 <div
                   className={`
                     font-bold
                     leading-none
                     text-[#0B2545]
-
                     ${
                       item.value === "International"
                         ? "text-[2.6rem] tracking-tight"
@@ -98,32 +126,55 @@ export default function ExecutiveStats() {
                     }
                   `}
                 >
+
                   {item.value}
+
                 </div>
+
 
               </div>
 
 
-              {/* TEXT BLOCK */}
+
+
               <div className="mt-8">
 
+
                 <div className="text-xs uppercase tracking-[0.35em] text-slate-500">
+
                   {item.title}
+
                 </div>
+
 
 
                 <p className="mt-3 text-base leading-6 text-slate-600">
+
                   {item.subtitle}
+
                 </p>
+
 
               </div>
 
+
+
             </motion.div>
+
+
           ))}
+
+
 
         </div>
 
+
+
       </div>
+
+
     </section>
+
   );
+
 }

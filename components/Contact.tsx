@@ -3,60 +3,115 @@
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 
+
 export default function Contact() {
+
   return (
-    <section id="contact" className="section-white">
+
+    <section
+      id="contact"
+      className="section-grey scroll-mt-32"
+    >
+
 
       <div className="container">
 
 
+
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+
+          initial={{ opacity:0,y:40 }}
+
+          whileInView={{ opacity:1,y:0 }}
+
+          viewport={{ once:true }}
+
+          transition={{ duration:0.8 }}
+
           className="max-w-5xl"
+
         >
 
-          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+
+
+          <p className="section-title">
+
             Contact
+
           </p>
 
 
+
+
           <h2 className="mt-5">
+
             Let's connect and explore
             <br />
             new opportunities.
+
           </h2>
+
+
+
 
 
           <div className="gold-line" />
 
 
-          <p className="section-intro mt-6 max-w-5xl">
+
+
+
+          <p className="section-intro max-w-5xl">
+
             I am open to conversations around executive leadership
             opportunities, board positions and advisory roles where my
             experience in business transformation, value creation and
             organisational change can contribute to sustainable growth.
+
           </p>
+
+
 
 
         </motion.div>
 
 
 
+
+
+
+
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mt-16 flex flex-col md:flex-row justify-between gap-12 max-w-5xl"
+
+          initial={{ opacity:0,y:35 }}
+
+          whileInView={{ opacity:1,y:0 }}
+
+          viewport={{ once:true }}
+
+          transition={{ duration:0.7 }}
+
+          className="
+          mt-16
+          flex
+          flex-col
+          md:flex-row
+          justify-between
+          gap-12
+          max-w-5xl
+          "
+
         >
 
 
-          {/* Email */}
+
+
+          {/* EMAIL */}
+
+
 
           <div className="flex items-center gap-5">
+
 
 
             <Mail
@@ -65,23 +120,33 @@ export default function Contact() {
             />
 
 
+
             <div>
 
 
+
               <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+
                 Email
+
               </p>
+
+
 
 
               <a
                 href="mailto:w@hitzcfo.com"
                 className="mt-2 block text-lg font-medium text-[#0B2545]"
               >
+
                 W@HitzCFO.com
+
               </a>
 
 
+
             </div>
+
 
 
           </div>
@@ -89,9 +154,16 @@ export default function Contact() {
 
 
 
-          {/* Phone */}
+
+
+
+
+          {/* PHONE */}
+
+
 
           <div className="flex items-center gap-5">
+
 
 
             <Phone
@@ -100,33 +172,55 @@ export default function Contact() {
             />
 
 
+
             <div>
 
 
+
               <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+
                 Phone
+
               </p>
+
+
+
 
 
               <a
                 href="tel:+34628182169"
                 className="mt-2 block text-lg font-medium text-[#0B2545]"
               >
+
                 +34 628 182 169
+
               </a>
+
+
 
 
             </div>
 
 
+
           </div>
+
+
+
 
 
         </motion.div>
 
 
+
+
+
       </div>
 
+
+
     </section>
+
   );
+
 }

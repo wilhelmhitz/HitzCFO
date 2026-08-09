@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 const career = [
   {
     year: "2026",
@@ -9,7 +10,7 @@ const career = [
     company: "Herraiz",
     location: "Tortosa",
     description:
-      "Leading the transformation of a family-owned industrial distribution business by modernising governance, customer experience, commercial execution and operational performance while preparing the organisation for sustainable growth",
+      "Leading the transformation of a family-owned industrial distribution business by modernising governance, customer experience, commercial execution and operational performance while preparing the organisation for sustainable growth.",
   },
   {
     year: "2021",
@@ -17,7 +18,7 @@ const career = [
     company: "Grupo Agora",
     location: "Barcelona",
     description:
-      "Led the transformation of a multinational family-owned holding company, returning the Group to profitability after three consecutive years of losses through organizational redesign, shared services, governance and digital transformation. Member of the Advisory and Compliance Boards.",
+      "Led the transformation of a multinational family-owned holding company, returning the Group to profitability after three consecutive years of losses through organisational redesign, shared services, governance and digital transformation. Member of the Advisory and Compliance Boards.",
   },
   {
     year: "2018",
@@ -25,7 +26,7 @@ const career = [
     company: "Lacer",
     location: "Barcelona",
     description:
-      "Executive Committee member leading Finance, HR, IT and Legal while accelerating enterprise-wide transformation co-leading the business strategic plan with McKinsey to transform the consumer health division",
+      "Executive Committee member leading Finance, HR, IT and Legal while accelerating enterprise-wide transformation and co-leading the business strategic plan with McKinsey to transform the consumer health division.",
   },
   {
     year: "2014",
@@ -39,7 +40,7 @@ const career = [
     year: "2011",
     title: "Risk & Compliance Director - Europe & SSA",
     company: "PepsiCo Europe & SSA",
-    location: "barcelona",
+    location: "Barcelona",
     description:
       "Led Governance, SOX, Cybersecurity and Business Continuity across more than 25 countries.",
   },
@@ -65,13 +66,13 @@ const career = [
     company: "PepsiCo Mexico",
     location: "Monterrey",
     description:
-      "Led Financial Planning & Analysis across four business units in one of Pepsico largest markets.",
+      "Led Financial Planning & Analysis across four business units in one of PepsiCo's largest markets.",
   },
   {
     year: "1998",
     title: "IT & Financial Planning Manager",
     company: "PepsiCo Caribbean",
-    location: "San Juan Puerto Rico",
+    location: "San Juan, Puerto Rico",
     description:
       "Integrated Finance and Technology to accelerate ERP modernisation and business intelligence.",
   },
@@ -79,24 +80,32 @@ const career = [
     year: "1996",
     title: "Logistics Manager",
     company: "PepsiCo Caribbean",
-    location: "San Juan Puerto Rico",
+    location: "San Juan, Puerto Rico",
     description:
       "Led Supply Chain, Procurement and Distribution improvement.",
   },
   {
     year: "1994",
     title: "Plant Manager",
-    company: "PepsiCo Dominican Republic ",
+    company: "PepsiCo Dominican Republic",
     location: "Santo Domingo",
     description:
       "Started an international leadership career driving manufacturing excellence.",
   },
 ];
 
+
 export default function CareerTimeline() {
+
   return (
-    <section id="career" className="section-white">
+
+    <section
+      id="career"
+      className="section-white scroll-mt-32 !pt-20 !pb-6"
+    >
+
       <div className="container">
+
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -106,25 +115,22 @@ export default function CareerTimeline() {
           className="max-w-5xl"
         >
 
-          <p className="uppercase tracking-[0.4em] text-sm font-medium text-[#C8A96A]">
+          <p className="section-title">
             Career Journey
           </p>
 
 
           <h2 className="mt-5">
-  Three decades of leadership across
-  <br />
-  multinational and family-owned businesses.
-</h2>
+            Three decades of leadership across
+            <br />
+            multinational and family-owned businesses.
+          </h2>
 
 
-<div className="h-6" />
+          <div className="gold-line" />
 
 
-<div className="gold-line !mt-0" />
-
-
-          <p className="section-intro mt-8 max-w-5xl">
+          <p className="section-intro max-w-5xl">
             International experience combining general management,
             transformation, finance, operations and digital capabilities to
             create sustainable value and profitable growth year after year.
@@ -134,28 +140,52 @@ export default function CareerTimeline() {
         </motion.div>
 
 
-        <div className="relative mt-20 border-l-2 border-[#C8A96A]/40 pl-10">
+
+        <div className="relative mt-2 border-l-2 border-[#C8A96A]/40 pl-10">
+
 
           {career.map((item, index) => (
 
             <motion.div
+
               key={item.year + item.company}
+
               initial={{ opacity: 0, x: -30 }}
+
               whileInView={{ opacity: 1, x: 0 }}
+
               viewport={{ once: true }}
+
               transition={{
                 duration: 0.5,
                 delay: index * 0.04,
               }}
-              className="relative mb-12"
+
+              className="relative mb-6"
+
             >
 
-              <span className="absolute -left-[49px] top-2 h-4 w-4 rounded-full border-4 border-white bg-[#C8A96A]" />
+
+              <span
+                className="
+                absolute
+                -left-[49px]
+                top-2
+                h-4
+                w-4
+                rounded-full
+                border-4
+                border-white
+                bg-[#C8A96A]
+                "
+              />
 
 
-              <div className="card">
+              <div className="card !p-6">
+
 
                 <div className="grid gap-8 lg:grid-cols-[110px_1fr]">
+
 
                   <div className="text-4xl font-bold text-[#0B2545]">
                     {item.year}
@@ -163,6 +193,7 @@ export default function CareerTimeline() {
 
 
                   <div>
+
 
                     <h3 className="text-2xl">
                       {item.title}
@@ -174,24 +205,33 @@ export default function CareerTimeline() {
                     </p>
 
 
-                    <p className="mt-6 leading-8 text-slate-600">
+                    <p className="mt-3 leading-7 text-slate-600">
                       {item.description}
                     </p>
 
 
                   </div>
 
+
                 </div>
 
+
               </div>
+
 
             </motion.div>
 
           ))}
 
+
         </div>
 
+
       </div>
+
+
     </section>
+
   );
+
 }
